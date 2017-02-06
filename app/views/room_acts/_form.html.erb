@@ -1,0 +1,37 @@
+<%= form_for(room_act) do |f| %>
+  <% if room_act.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(room_act.errors.count, "error") %> prohibited this room_act from being saved:</h2>
+
+      <ul>
+      <% room_act.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %>
+    <%= f.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Amount %>
+    <%= f.number_field :Amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Desc %>
+    <%= f.text_field :Desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Time %>
+    <%= f.date_select :Time %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

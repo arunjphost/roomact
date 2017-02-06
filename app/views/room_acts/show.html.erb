@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room_act.Name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @room_act.Amount %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @room_act.Desc %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @room_act.Time %>
+</p>
+
+<%= link_to 'Edit', edit_room_act_path(@room_act) %> |
+<%= link_to 'Back', room_acts_path %>

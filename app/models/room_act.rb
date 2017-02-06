@@ -1,0 +1,2 @@
+class RoomAct < ApplicationRecord
+end
