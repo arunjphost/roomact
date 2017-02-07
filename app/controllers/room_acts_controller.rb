@@ -11,6 +11,9 @@ class RoomActsController < ApplicationController
   # GET /room_acts/1.json
   def show
   end
+  def room_total
+    RoomAct.sum(:amount)
+  end
 
   # GET /room_acts/new
   def new
